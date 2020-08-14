@@ -1,0 +1,34 @@
+﻿<Window x:Class="PrestamosdeJuegos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrestamosdeJuegos"
+        mc:Ignorable="d"
+        Title="Menú principal" Height="400" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid>
+        <StackPanel>
+             <Menu Height="24" FontSize="15">
+
+                <MenuItem Header="Registros" FontWeight="Normal" FontSize="18">
+                    <MenuItem x:Name="rNombreMenuItem" Click="MenuItem_Click_r" Header="Registrar Proyecto"/>
+                </MenuItem>
+
+                <MenuItem Header="Consultas" FontWeight="Normal" FontSize="18">
+                    <MenuItem x:Name="cNombreMenuItem" Click="MenuItem_Click_c" Header="Consultar Tarea"/>
+                </MenuItem>
+
+                <MenuItem Header="Ayuda" FontWeight="Normal" FontSize="18">
+                    <Menu/>
+                </MenuItem>
+                
+            </Menu>
+        </StackPanel>
+        
+        
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="Bienvenidos al Menu Principal" FontWeight="Bold" FontSize="22" Width="329" Height="57"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>
