@@ -12,6 +12,7 @@ namespace PrestamosdeJuegos.DAL
         public DbSet<Juegos> Juegos { get; set; }
         public DbSet<Amigos> Amigos { get; set; }
         public DbSet<Prestamos> Prestamos { get; set; }
+        public DbSet<EntradasJuegos> EntradasJuegos { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

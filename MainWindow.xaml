@@ -12,13 +12,15 @@
 
                 <MenuItem Header="Registros">
                     <MenuItem x:Name="rAmigosMenuItem" Click="rAmigosMenuItem_Click" Header="Registrar Amigos"/>
-                    <MenuItem x:Name="rJuegossMenuItem" Click="rJuegosMenuItem_Click" Header="Consultar Juegos"/>
-                    <MenuItem x:Name="rPrestamosMenuItem" Click="rPrestamosMenuItem_Click" Header="Consultar Prestamos"/>
+                    <MenuItem x:Name="rEntradasJuegosMenuItem" Click="rEntradasJuegosMenuItem_Click" Header="Registrar Entradas Juegos"/>
+                    <MenuItem x:Name="rJuegosMenuItem" Click="rJuegosMenuItem_Click" Header="Registrar Juegos"/>
+                    <MenuItem x:Name="rPrestamosMenuItem" Click="rPrestamosMenuItem_Click" Header="Registrar Prestamos"/>
                 </MenuItem>
 
                 <MenuItem Header="Consultas">
                     <MenuItem x:Name="cAmigosMenuItem" Click="cAmigosMenuItem_Click" Header="Consultar Amigos"/>
-                    <MenuItem x:Name="cJuegossMenuItem" Click="cJuegosMenuItem_Click" Header="Consultar Juegos"/>
+                    <MenuItem x:Name="cEntradasJuegosMenuItem" Click="cEntradasJuegosMenuItem_Click" Header="Consultar Entradas Juegos"/>
+                    <MenuItem x:Name="cJuegosMenuItem" Click="cJuegosMenuItem_Click" Header="Consultar Juegos"/>
                     <MenuItem x:Name="cPrestamosMenuItem" Click="cPrestamosMenuItem_Click" Header="Consultar Prestamos"/>
                 </MenuItem>
 

@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace PrestamosdeJuegos
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -61,6 +58,18 @@ namespace PrestamosdeJuegos
         {
             cPrestamos cPrestamos = new cPrestamos();
             cPrestamos.Show();
+        }
+
+        private void rEntradasJuegosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rEntradasJuegos rEntradasJuegos = new rEntradasJuegos();
+            rEntradasJuegos.Show();
+        }
+
+        private void cEntradasJuegosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            cEntradasJuegos cEntradasJuegos = new cEntradasJuegos();
+            cEntradasJuegos.Show();
         }
     }
 }

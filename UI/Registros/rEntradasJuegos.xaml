@@ -1,0 +1,57 @@
+﻿<Window x:Class="PrestamosdeJuegos.UI.Registros.rEntradasJuegos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrestamosdeJuegos.UI.Registros"
+        mc:Ignorable="d"
+         Title="Registro entrada de juegos" Height="330" Width="510" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+            <Label Content="EntradaJuego Id" FontWeight="Bold" FontSize="16"/>
+
+                <StackPanel Orientation="Horizontal" Height="35">
+                <TextBox x:Name="EntradaJuegoIdTextBox" Text="{Binding EntradaJuegoId}" Width="150" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center"/>
+
+                <Button x:Name="BuscarButton" Margin="50,0,0,0" Width="120" Click="BuscarButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="30" Source="/Resources/Busca.png" />
+                        <Label Content="Buscar" FontSize="17" FontWeight="Bold"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+            <Label Content="Juego Id" FontWeight="Bold" Margin="0,10,0,0"/>
+            <ComboBox x:Name="JuegoIdComboBox" SelectedValue="{Binding JuegoId}" VerticalContentAlignment="Center" Width="100" HorizontalAlignment="Left"/>
+
+            <Label Content="Fecha" FontWeight="Bold"/>
+            <DatePicker x:Name="FechaDatePicker" SelectedDate="{Binding Fecha}" Height="30" VerticalContentAlignment="Center" />
+             
+            <Label Content="Cantidad" FontWeight="Bold"/>
+            <TextBox x:Name="CantidadTextBox" Text="{Binding Cantidad}" Height="30" VerticalContentAlignment="Center" TextChanged="CantidadTextBox_TextChanged"/>
+             
+            <StackPanel Orientation="Horizontal" Height="35" Margin="0,15,0,0" HorizontalAlignment="Center">
+                <Button x:Name="NuevoButton" Click="NuevoButton_Click" Width="120">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="25" Source="/Resources/Nuevo.png"/>
+                        <Label Content="Nuevo" FontSize="17" FontWeight="Bold"/>
+                    </StackPanel>
+                </Button>
+                 
+                <Button x:Name="GuardarButton" Click="GuardarButton_Click" Width="120" Margin="50,0,0,0" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="30" Source="/Resources/Guarda.png"/>
+                        <Label Content="Guardar" FontSize="17" FontWeight="Bold"/>
+                    </StackPanel>
+                </Button>
+                 
+                <Button x:Name="EliminarButton" Click="EliminarButton_Click" Width="120" Margin="50,0,0,0" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="30" Source="/Resources/Elimina.png"/>
+                        <Label Content="Eliminar" FontSize="17" FontWeight="Bold"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel> 
+        </StackPanel>
+    </Grid>
+</Window>
