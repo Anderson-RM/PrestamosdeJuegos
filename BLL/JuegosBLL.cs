@@ -218,7 +218,7 @@ namespace PrestamosdeJuegos.BLL
             }
             else
             {
-                MessageBox.Show("No puedes dar salida a esta catidad de juegos, porque es menor que 0.\n\nVerifique la existencia actual del libro.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("No puedes dar salida a esta catidad de juegos, porque es menor que 0.\n\nVerifique la existencia actual del juego.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
         }
