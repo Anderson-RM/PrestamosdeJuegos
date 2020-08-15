@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrestamosdeJuegos.UI.Consultas"
         mc:Ignorable="d"
-        Title="Consultar Juegos" Height="435" Width="680" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="Consultar Juegos" Height="440" Width="680" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
 
         <StackPanel Orientation="Vertical" Margin="0,5,0,0" HorizontalAlignment="Center">

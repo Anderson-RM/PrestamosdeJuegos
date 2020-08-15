@@ -10,15 +10,19 @@
         <StackPanel>
              <Menu Height="24" FontSize="15">
 
-                <MenuItem Header="Registros" FontWeight="Normal" FontSize="18" Click="MenuItem_Click">
-                    <MenuItem x:Name="rNombreMenuItem"  Header="Registrar Proyecto"/>
+                <MenuItem Header="Registros">
+                    <MenuItem x:Name="rAmigosMenuItem" Click="rAmigosMenuItem_Click" Header="Registrar Amigos"/>
+                    <MenuItem x:Name="rJuegossMenuItem" Click="rJuegosMenuItem_Click" Header="Consultar Juegos"/>
+                    <MenuItem x:Name="rPrestamosMenuItem" Click="rPrestamosMenuItem_Click" Header="Consultar Prestamos"/>
                 </MenuItem>
 
-                <MenuItem Header="Consultas" FontWeight="Normal" FontSize="18" Click="MenuItem_Click_1">
-                    <MenuItem x:Name="cNombreMenuItem" Click="MenuItem_Click_c" Header="Consultar Tarea"/>
+                <MenuItem Header="Consultas">
+                    <MenuItem x:Name="cAmigosMenuItem" Click="cAmigosMenuItem_Click" Header="Consultar Amigos"/>
+                    <MenuItem x:Name="cJuegossMenuItem" Click="cJuegosMenuItem_Click" Header="Consultar Juegos"/>
+                    <MenuItem x:Name="cPrestamosMenuItem" Click="cPrestamosMenuItem_Click" Header="Consultar Prestamos"/>
                 </MenuItem>
 
-                <MenuItem Header="Ayuda" FontWeight="Normal" FontSize="18">
+                <MenuItem Header="Ayuda">
                     <Menu/>
                 </MenuItem>
                 

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrestamosdeJuegos.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Prestamos" Height="570" Width="510" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="Registro de Prestamos" Height="580" Width="510" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" >
             <StackPanel Orientation="Horizontal">
@@ -61,7 +61,7 @@
                         <DataGrid x:Name="DetalleDataGrid" ItemsSource="{Binding Detalle}" Height="80" AutoGenerateColumns="False" Margin="0,10,0,0">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="Juego Id" Binding="{Binding JuegoId}"/>
-                                <DataGridTextColumn Header="Prestamo Id" Binding="{Binding PrestamoId}"/>
+                                <DataGridTextColumn Header="Nombre" Binding="{Binding FK_Juegos.Nombre}"/>
                                 <DataGridTextColumn Header="Cantidad" Binding="{Binding Cantidad}"/>
                             </DataGrid.Columns>
                         </DataGrid>
@@ -76,7 +76,7 @@
                             </Button>
 
                             <Label Content="Cantidad Total" FontWeight="Bold" />
-                            <TextBox x:Name="CantidadTotalTextBox" Text="{Binding CantidadTotal}" Width="130" IsReadOnly="True" VerticalContentAlignment="Center"/>
+                            <TextBox x:Name="CantidadTotalTextBox" Text="{Binding CantidadJuegosTotal}" Width="130" IsReadOnly="True" VerticalContentAlignment="Center"/>
                         </StackPanel>
                     </StackPanel>
                 </GroupBox>

@@ -21,5 +21,40 @@ namespace PrestamosdeJuegos.UI.Registros
         {
             InitializeComponent();
         }
+
+        private void BuscarButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AgregarFilaButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RemoverFilaButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NuevoButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void GuardarButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EliminarButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PrestamoIdTextbox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
