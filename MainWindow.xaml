@@ -11,7 +11,7 @@
              <Menu Height="24" FontSize="15">
 
                 <MenuItem Header="Registros" FontWeight="Normal" FontSize="18">
-                    <MenuItem x:Name="rNombreMenuItem" Click="MenuItem_Click_r" Header="Registrar Proyecto"/>
+                    <MenuItem x:Name="rNombreMenuItem"  Header="Registrar Proyecto"/>
                 </MenuItem>
 
                 <MenuItem Header="Consultas" FontWeight="Normal" FontSize="18">

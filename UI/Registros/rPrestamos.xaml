@@ -5,8 +5,107 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrestamosdeJuegos.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Prestamos" Height="450" Width="800">
+        Title="Registro de Prestamos" Height="570" Width="510" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
-        
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" >
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Préstamo Id" FontWeight="Bold" FontSize="16"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Height="35">
+                <TextBox x:Name="PrestamoIdTextbox" Text="{Binding PrestamoId}" Width="150" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center" TextChanged="PrestamoIdTextbox_TextChanged"/>
+
+
+                <Button x:Name="BuscarButton" Margin="50,0,0,0" Width="120" Click="BuscarButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="30" Source="/Resources/Busca.png" />
+                        <Label Content="Buscar" FontSize="17" FontWeight="Bold"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="0,10,0,0">
+                <Label Content="Fecha Préstamo" FontWeight="Bold" />
+                <DatePicker x:Name="FechaPrestamoTextBox" SelectedDate="{Binding FechaPrestamo}" Width="150" Height="25" VerticalContentAlignment="Center" HorizontalAlignment="Left" />
+            </StackPanel>
+
+            <Label Content="Amigo Id" FontWeight="Bold" Margin="0,5,0,0"  />
+            <ComboBox x:Name="AmigoIdComboBox" SelectedValue="{Binding AmigoId}" Height="25" Width="100" VerticalContentAlignment="Center" HorizontalAlignment="Left" />
+
+            <Label Content="Observacion" FontWeight="Bold" Margin="0,5,0,0"/>
+            <TextBox x:Name="ObservacionTextBox" Text="" Height="40" VerticalContentAlignment="Center"/>
+             
+            <StackPanel Orientation="Vertical">
+                <GroupBox Header="Detalle de Préstamos" Margin="0,10,0,0">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+
+                            <StackPanel Orientation="Vertical">
+                                <Label Content="Juego Id"/>
+                                <ComboBox x:Name="JuegoIdComboBox" Width="100" Margin="0,0,25,0"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" Margin="0,0,40,0" >
+                                <Label Content="Cantidad Juegos" HorizontalAlignment="Center"/>
+                                <TextBox x:Name="CantidaadJuegosTextBox" Height="23" Width="100" VerticalContentAlignment="Center"/>
+                            </StackPanel>
+
+                            <Button x:Name="AgregarFilaButton" Click="AgregarFilaButton_Click" Height="30" Margin="0,20,0,0">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/Resources/Agrega.png" Height="20"/>
+                                    <Label Content="Agregar fila"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+
+                        <DataGrid x:Name="DetalleDataGrid" ItemsSource="{Binding Detalle}" Height="80" AutoGenerateColumns="False" Margin="0,10,0,0">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Juego Id" Binding="{Binding JuegoId}"/>
+                                <DataGridTextColumn Header="Prestamo Id" Binding="{Binding PrestamoId}"/>
+                                <DataGridTextColumn Header="Cantidad" Binding="{Binding Cantidad}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10,0,0">
+                            <Button x:Name="RemoverFilaButton" Click="RemoverFilaButton_Click" Width="175" Margin="0,0,55,0" >
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/Resources/Quitar.png" Height="20"/>
+                                    <Label Content="Remover fila seleccionada"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Label Content="Cantidad Total" FontWeight="Bold" />
+                            <TextBox x:Name="CantidadTotalTextBox" Text="{Binding CantidadTotal}" Width="130" IsReadOnly="True" VerticalContentAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal" Height="35" Margin="0,15,0,0" HorizontalAlignment="Center">
+                <Button x:Name="NuevoButton" Click="NuevoButton_Click" Width="120">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="25" Source="/Resources/Nuevo.png"/>
+                        <Label Content="Nuevo" FontSize="17" FontWeight="Bold"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="GuardarButton" Click="GuardarButton_Click" Width="120" Margin="50,0,0,0" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="25" Source="/Resources/Guarda.png"/>
+                        <Label Content="Guardar" FontSize="17" FontWeight="Bold"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="EliminarButton" Click="EliminarButton_Click" Width="120" Margin="50,0,0,0" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="25" Source="/Resources/Elimina.png"/>
+                        <Label Content="Eliminar" FontSize="17" FontWeight="Bold"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+        </StackPanel>
     </Grid>
 </Window>
