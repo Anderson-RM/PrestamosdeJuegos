@@ -21,7 +21,7 @@ namespace PrestamosdeJuegos.UI.Registros
         {
             InitializeComponent();
             this.DataContext = entradasJuegos;
-            //—————————————————————————————————————[ ComboBox LibroId ]—————————————————————————————————————
+            //—————————————————————————————————————[ ComboBox JuegoId ]—————————————————————————————————————
             JuegoIdComboBox.ItemsSource = JuegosBLL.GetJuegos();
             JuegoIdComboBox.SelectedValuePath = "JuegoId";
             JuegoIdComboBox.DisplayMemberPath = "Nombre";
@@ -83,7 +83,7 @@ namespace PrestamosdeJuegos.UI.Registros
                     return;
 
                 //———————————————————————————————————————————————————————[ VALIDAR SI ESTA VACIO ]———————————————————————————————————————————————————————
-                //—————————————————————————————————[ EntradaLibro Id ]—————————————————————————————————
+                //—————————————————————————————————[ EntradaJuego Id ]—————————————————————————————————
                 if (EntradaJuegoIdTextBox.Text.Trim() == string.Empty)
                 {
                     MessageBox.Show("El Campo (EntradaJuego Id) está vacío.\n\nDebe asignar un Id a la Entrada del Juego.", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -92,7 +92,7 @@ namespace PrestamosdeJuegos.UI.Registros
                     EntradaJuegoIdTextBox.SelectAll();
                     return;
                 }
-                //—————————————————————————————————[ Libro Id ]—————————————————————————————————
+                //—————————————————————————————————[ Juego Id ]—————————————————————————————————
                 if (JuegoIdComboBox.Text == string.Empty)
                 {
                     MessageBox.Show("El Campo (Juego Id) está vacío.\n\nAsigne un Id al Juego.", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -145,7 +145,7 @@ namespace PrestamosdeJuegos.UI.Registros
         }
         //—————————————————————————————————————————————————————————————[ TEXT CHANGED ]—————————————————————————————————————————————————————————————
 
-        //——————————————————————————————————————————[ EntradaLibro Id]——————————————————————————————————————————
+        //——————————————————————————————————————————[ EntradaJuego Id]——————————————————————————————————————————
         private void EntradaLibroIdTextbox_TextChanged(object sender, TextChangedEventArgs e)
         {
             try
