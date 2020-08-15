@@ -10,6 +10,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using PrestamosdeJuegos.BLL;
+using PrestamosdeJuegos.Entidades;
+
 namespace PrestamosdeJuegos.UI.Consultas
 {
     /// <summary>
@@ -20,6 +23,11 @@ namespace PrestamosdeJuegos.UI.Consultas
         public cPrestamos()
         {
             InitializeComponent();
+        }
+
+        private void ConsultarButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -10,11 +10,11 @@
         <StackPanel>
              <Menu Height="24" FontSize="15">
 
-                <MenuItem Header="Registros" FontWeight="Normal" FontSize="18">
+                <MenuItem Header="Registros" FontWeight="Normal" FontSize="18" Click="MenuItem_Click">
                     <MenuItem x:Name="rNombreMenuItem"  Header="Registrar Proyecto"/>
                 </MenuItem>
 
-                <MenuItem Header="Consultas" FontWeight="Normal" FontSize="18">
+                <MenuItem Header="Consultas" FontWeight="Normal" FontSize="18" Click="MenuItem_Click_1">
                     <MenuItem x:Name="cNombreMenuItem" Click="MenuItem_Click_c" Header="Consultar Tarea"/>
                 </MenuItem>
 
