@@ -24,16 +24,11 @@ namespace PrestamosdeJuegos
             InitializeComponent();
         }
 
+        //——————————————————————————————————————————[Registros]——————————————————————————————————————————
         private void rAmigosMenuItem_Click(object sender, RoutedEventArgs e)
         {
             rAmigos rAmigos = new rAmigos();
             rAmigos.Show();
-        }
-
-        private void cAmigosMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-            cAmigos cAmigos = new cAmigos();
-            cAmigos.Show();
         }
 
         private void rJuegosMenuItem_Click(object sender, RoutedEventArgs e)
@@ -48,6 +43,20 @@ namespace PrestamosdeJuegos
             rPrestamos.Show();
         }
 
+        private void rEntradasJuegosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rEntradasJuegos rEntradasJuegos = new rEntradasJuegos();
+            rEntradasJuegos.Show();
+        }
+
+
+        //——————————————————————————————————————————[Consultas]——————————————————————————————————————————
+        private void cAmigosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            cAmigos cAmigos = new cAmigos();
+            cAmigos.Show();
+        }  
+
         private void cJuegosMenuItem_Click(object sender, RoutedEventArgs e)
         {
             cJuegos cJuegos = new cJuegos();
@@ -58,13 +67,7 @@ namespace PrestamosdeJuegos
         {
             cPrestamos cPrestamos = new cPrestamos();
             cPrestamos.Show();
-        }
-
-        private void rEntradasJuegosMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-            rEntradasJuegos rEntradasJuegos = new rEntradasJuegos();
-            rEntradasJuegos.Show();
-        }
+        }        
 
         private void cEntradasJuegosMenuItem_Click(object sender, RoutedEventArgs e)
         {
