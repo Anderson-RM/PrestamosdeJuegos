@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrestamosdeJuegos.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Prestamos" Height="580" Width="510" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="Registro de Prestamos" Height="580" Width="510" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="/Resources/Registro.png">
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" >
             <StackPanel Orientation="Horizontal">

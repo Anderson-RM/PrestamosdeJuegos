@@ -146,7 +146,7 @@ namespace PrestamosdeJuegos.UI.Registros
         //—————————————————————————————————————————————————————————————[ TEXT CHANGED ]—————————————————————————————————————————————————————————————
 
         //——————————————————————————————————————————[ EntradaJuego Id]——————————————————————————————————————————
-        private void EntradaLibroIdTextbox_TextChanged(object sender, TextChangedEventArgs e)
+        private void EntradaJuegoIdTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             try
             {
@@ -171,7 +171,7 @@ namespace PrestamosdeJuegos.UI.Registros
             {
                 if (CantidadTextBox.Text.Trim() != string.Empty)
                 {
-                    int.Parse(CantidadTextBox.Text);
+                    double.Parse(CantidadTextBox.Text);
                 }
             }
             catch

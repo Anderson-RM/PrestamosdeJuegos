@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrestamosdeJuegos.UI.Consultas"
         mc:Ignorable="d"
-        Title="Consultar Amigos" Height="440" Width="680" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="Consultar Amigos" Height="440" Width="680" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="/Resources/busca.png" >
     <Grid>
         
         <StackPanel Orientation="Vertical" Margin="0,5,0,0" HorizontalAlignment="Center">            

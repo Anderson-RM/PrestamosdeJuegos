@@ -12,29 +12,37 @@
 		<None Remove="Resources\busca.png" />
 		<None Remove="Resources\elimina.png" />
 		<None Remove="Resources\guarda.png" />
+		<None Remove="Resources\Home.png" />
 		<None Remove="Resources\nuevo.png" />
 		<None Remove="Resources\quitar.png" />
+		<None Remove="Resources\Registro.png" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Content Include="Resources\agrega.png">
+		<Resource Include="Resources\agrega.png">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</Content>
-		<Content Include="Resources\busca.png">
+		</Resource>
+		<Resource Include="Resources\busca.png">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</Content>
-		<Content Include="Resources\elimina.png">
+		</Resource>
+		<Resource Include="Resources\elimina.png">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</Content>
-		<Content Include="Resources\guarda.png">
+		</Resource>
+		<Resource Include="Resources\guarda.png">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</Content>
-		<Content Include="Resources\nuevo.png">
+		</Resource>
+		<Resource Include="Resources\Home.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Resource>
+		<Resource Include="Resources\nuevo.png">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</Content>
-		<Content Include="Resources\quitar.png">
+		</Resource>
+		<Resource Include="Resources\quitar.png">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</Content>
+		</Resource>
+		<Resource Include="Resources\Registro.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Resource>
 	</ItemGroup>
 
 	<ItemGroup>

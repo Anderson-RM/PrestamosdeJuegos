@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrestamosdeJuegos.UI.Registros"
         mc:Ignorable="d"
-         Title="Registro entrada de juegos" Height="350" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+         Title="Registro entrada de juegos" Height="350" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="/Resources/Registro.png">
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
             <Label Content="EntradaJuego Id" FontWeight="Bold" FontSize="16"/>
 
                 <StackPanel Orientation="Horizontal" Height="35">
-                <TextBox x:Name="EntradaJuegoIdTextBox" Text="{Binding EntradaJuegoId}" Width="150" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center"/>
+                <TextBox x:Name="EntradaJuegoIdTextBox" Text="{Binding EntradaJuegoId}" Width="150" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center" TextChanged="EntradaJuegoIdTextBox_TextChanged"/>
 
                 <Button x:Name="BuscarButton" Margin="50,0,0,0" Width="120" Click="BuscarButton_Click">
                     <StackPanel Orientation="Horizontal">

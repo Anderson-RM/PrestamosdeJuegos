@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrestamosdeJuegos.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Amigos" Height="480" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="Registro de Amigos" Height="480" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="/Resources/Registro.png">
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
 
@@ -14,7 +14,7 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Height="35">
-                <TextBox x:Name="AmigoIdTexBox" Text="{Binding AmigoId}" Width="150" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center"/>
+                <TextBox x:Name="AmigoIdTextBox" Text="{Binding AmigoId}" Width="150" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center" TextChanged="AmigoIdTextBox_TextChanged"/>
 
                 <Button x:Name="BuscarButton" Margin="100,0,0,0" Width="120" Click="BuscarButton_Click">
                     <StackPanel Orientation="Horizontal">
@@ -28,7 +28,7 @@
             <TextBox x:Name="NombreCompletoTextBox" Text="{Binding NombreCompleto}" Height="30" VerticalContentAlignment="Center" />
 
             <Label Content="Direccion" FontWeight="Bold" Margin="0,0,10,0"/>
-            <TextBox x:Name="DireccionTextBox" Text="{Binding Direccion}" Height="30" VerticalContentAlignment="Center" MaxLength="13"/>
+            <TextBox x:Name="DireccionTextBox" Text="{Binding Direccion}" Height="30" VerticalContentAlignment="Center"/>
 
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0" >
                 <Label Content="Telefono" FontWeight="Bold" Margin="0,0,10,0"/>
@@ -41,7 +41,7 @@
             </StackPanel>
 
             <Label Content="E-Mail" FontWeight="Bold" Margin="0,0,10,0"/>
-            <TextBox x:Name="EmailTextBox" Text="{Binding Email}" Height="30" VerticalContentAlignment="Center" MaxLength="13"/>
+            <TextBox x:Name="EmailTextBox" Text="{Binding Email}" Height="30" VerticalContentAlignment="Center"/>
 
             <Label Content="Fecha de Nacimiento" FontWeight="Bold"/>
             <DatePicker x:Name="FechaNacimientoDatePicker" SelectedDate="{Binding FechaNacimiento}" Height="30" VerticalContentAlignment="Center"/>

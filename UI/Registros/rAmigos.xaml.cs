@@ -38,7 +38,7 @@ namespace PrestamosdeJuegos.UI.Registros
         private bool Validar()
         {
             bool Validado = true;
-            if (AmigoIdTexBox.Text.Length == 0)
+            if (AmigoIdTextBox.Text.Length == 0)
             {
                 Validado = false;
                 MessageBox.Show("Transacción Fallida", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -49,7 +49,7 @@ namespace PrestamosdeJuegos.UI.Registros
         //——————————————————————————————————————————————————————————————[ Buscar ]———————————————————————————————————————————————————————————————
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            Amigos encontrado = AmigosBLL.Buscar(Utilidades.ToInt(AmigoIdTexBox.Text));
+            Amigos encontrado = AmigosBLL.Buscar(Utilidades.ToInt(AmigoIdTextBox.Text));
 
             if (encontrado != null)
             {
@@ -62,8 +62,8 @@ namespace PrestamosdeJuegos.UI.Registros
                 this.DataContext = this.amigos;
                 MessageBox.Show($"Este Amigo no fue encontrado.\n\nAsegúrese que existe o cree una nuevo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                 Limpiar();
-                AmigoIdTexBox.SelectAll();
-                AmigoIdTexBox.Focus();
+                AmigoIdTextBox.SelectAll();
+                AmigoIdTextBox.Focus();
             }
         }
         //——————————————————————————————————————————————————————————————[ Nuevo ]———————————————————————————————————————————————————————————————
@@ -80,12 +80,12 @@ namespace PrestamosdeJuegos.UI.Registros
 
                 //———————————————————————————————————————————————————————[ VALIDAR SI ESTA VACIO ]———————————————————————————————————————————————————————
                 //—————————————————————————————————[ Amigo Id ]—————————————————————————————————
-                if (AmigoIdTexBox.Text.Trim() == string.Empty)
+                if (AmigoIdTextBox.Text.Trim() == string.Empty)
                 {
                     MessageBox.Show("El Campo (Amigo Id) está vacío.\n\nAsigne un Id al Amigo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    AmigoIdTexBox.Text = "0";
-                    AmigoIdTexBox.Focus();
-                    AmigoIdTexBox.SelectAll();
+                    AmigoIdTextBox.Text = "0";
+                    AmigoIdTextBox.Focus();
+                    AmigoIdTextBox.SelectAll();
                     return;
                 }
                 //—————————————————————————————————[ Nombre Completo ]—————————————————————————————————
@@ -107,7 +107,14 @@ namespace PrestamosdeJuegos.UI.Registros
                 //—————————————————————————————————[ Telefono ]—————————————————————————————————
                 if (TelefonoTextBox.Text == string.Empty)
                 {
-                    MessageBox.Show("El Campo (Telefono) está vacío.\n\nAsigne un Telefono al Amigo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("El Campo (Telefono) está vacío.\n\nAsigne un Teléfono al Amigo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    TelefonoTextBox.Clear();
+                    TelefonoTextBox.Focus();
+                    return;
+                }
+                if (TelefonoTextBox.Text.Length != 10)
+                {
+                    MessageBox.Show($"El Celular({TelefonoTextBox.Text}) no es válido.\n\nEl Teléfono debe tener 10 dígitos (0-9).", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                     TelefonoTextBox.Clear();
                     TelefonoTextBox.Focus();
                     return;
@@ -116,6 +123,13 @@ namespace PrestamosdeJuegos.UI.Registros
                 if (CelularTextBox.Text == string.Empty)
                 {
                     MessageBox.Show("El Campo (Celular) está vacío.\n\nAsigne un Celular al Amigo.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    CelularTextBox.Clear();
+                    CelularTextBox.Focus();
+                    return;
+                }
+                if (CelularTextBox.Text.Length != 10)
+                {
+                    MessageBox.Show($"El Celular({CelularTextBox.Text}) no es válido.\n\nEl Celular debe tener 10 dígitos (0-9).", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                     CelularTextBox.Clear();
                     CelularTextBox.Focus();
                     return;
@@ -150,7 +164,7 @@ namespace PrestamosdeJuegos.UI.Registros
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
         {
             {
-                if (AmigosBLL.Eliminar(Utilidades.ToInt(AmigoIdTexBox.Text)))
+                if (AmigosBLL.Eliminar(Utilidades.ToInt(AmigoIdTextBox.Text)))
                 {
                     Limpiar();
                     MessageBox.Show("Registro Eliminado", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -162,21 +176,21 @@ namespace PrestamosdeJuegos.UI.Registros
         //—————————————————————————————————————————————————————————————[ TEXT CHANGED ]—————————————————————————————————————————————————————————————
 
         //——————————————————————————————————————————[ Juego Id ]——————————————————————————————————————————
-        private void JuegoIdTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void AmigoIdTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             try
             {
-                if (AmigoIdTexBox.Text.Trim() != string.Empty)
+                if (AmigoIdTextBox.Text.Trim() != string.Empty)
                 {
-                    int.Parse(AmigoIdTexBox.Text);
+                    int.Parse(AmigoIdTextBox.Text);
                 }
             }
             catch
             {
-                MessageBox.Show($"El valor digitado en el campo (Juego Id) no es un número.\n\nPor favor, digite un número.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-                AmigoIdTexBox.Text = "0";
-                AmigoIdTexBox.Focus();
-                AmigoIdTexBox.SelectAll();
+                MessageBox.Show($"El valor digitado en el campo (Amigo Id) no es un número.\n\nPor favor, digite un número.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                AmigoIdTextBox.Text = "0";
+                AmigoIdTextBox.Focus();
+                AmigoIdTextBox.SelectAll();
             }
         }
         //——————————————————————————————————————————[ TelefonoTextBox_TextChanged ]——————————————————————————————————————————
@@ -203,7 +217,7 @@ namespace PrestamosdeJuegos.UI.Registros
             {
                 if (CelularTextBox.Text.Trim() != string.Empty)
                 {
-                    long.Parse(TelefonoTextBox.Text);
+                    long.Parse(CelularTextBox.Text);
                 }
             }
             catch

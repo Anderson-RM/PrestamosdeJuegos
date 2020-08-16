@@ -116,11 +116,10 @@ namespace PrestamosdeJuegos.UI.Registros
         {
             try
             {
-                double total = Convert.ToDouble(CantidadJuegosTextBox.Text);
                 if (DetalleDataGrid.Items.Count >= 1 && DetalleDataGrid.SelectedIndex <= DetalleDataGrid.Items.Count - 1)
                 {
                     prestamos.Detalle.RemoveAt(DetalleDataGrid.SelectedIndex);
-                    prestamos.CantidadJuegosTotal -= total;
+                    prestamos.CantidadJuegosTotal -= Convert.ToDouble(CantidadJuegosTextBox.Text.ToString());
                     Cargar();
                 }
             }
