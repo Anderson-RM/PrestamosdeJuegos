@@ -13,7 +13,7 @@ namespace PrestamosdeJuegos.Entidades
         public DateTime Fecha { get; set; } = DateTime.Now;
         public int AmigoId { get; set; }
         public string Observacion { get; set; }
-        public int CantidadJuegosTotal { get; set; }
+        public double CantidadJuegosTotal { get; set; }
 
         [ForeignKey("PrestamoId")]
         public virtual List<PrestamosDetalle> Detalle { get; set; } = new List<PrestamosDetalle>();
