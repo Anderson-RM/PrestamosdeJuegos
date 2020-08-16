@@ -23,9 +23,11 @@
                 <StackPanel  Margin="0,0,10,0" >
                     <Label Content="Filtro:" />
                     <ComboBox x:Name="FiltroComboBox" Width="95" Height="24" >
-                        <ComboBoxItem Content="Devolución Id"/>
-                        <ComboBoxItem Content="Usuario Id"/>
-                        <ComboBoxItem Content="Estudiante Id"/>
+                        <ComboBoxItem Content="Id"/>
+                        <ComboBoxItem Content="Nombre"/>
+                        <ComboBoxItem Content="Telefono"/>
+                        <ComboBoxItem Content="Celular"/>
+                        <ComboBoxItem Content="Email"/>
                     </ComboBox>
                 </StackPanel>
                  
@@ -45,7 +47,13 @@
             <StackPanel HorizontalAlignment="Left" Width="635" >
                 <DataGrid x:Name="DatosDataGrid" Height="330" IsReadOnly="True" AutoGenerateColumns="False" AlternatingRowBackground="Gainsboro" TextBlock.TextAlignment="Center">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Ejemplo" Binding="{Binding Ejemplo}"/>
+                        <DataGridTextColumn Header="Amigo Id" Binding="{Binding AmigoId}"/>
+                        <DataGridTextColumn Header="Nombre Completo" Binding="{Binding NombreCompleto}"/>
+                        <DataGridTextColumn Header="Dirección" Binding="{Binding Direccion}"/>
+                        <DataGridTextColumn Header="Teléfono" Binding="{Binding Telefono, StringFormat='(###) ###-####'}"/>
+                        <DataGridTextColumn Header="Celular" Binding="{Binding Celular, StringFormat='(###) ###-####'}"/>
+                        <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                        <DataGridTextColumn Header="Fecha Nacimiento" Binding="{Binding FechaNacimiento, StringFormat='dd/MM/yyyy'}"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>             
