@@ -23,9 +23,9 @@
                 <StackPanel  Margin="0,0,10,0" >
                     <Label Content="Filtro:" />
                     <ComboBox x:Name="FiltroComboBox" Width="95" Height="24" >
-                        <ComboBoxItem Content="Devolución Id"/>
-                        <ComboBoxItem Content="Usuario Id"/>
-                        <ComboBoxItem Content="Estudiante Id"/>
+                        <ComboBoxItem Content="Prestamo Id"/>
+                        <ComboBoxItem Content="Amigo Id"/>
+                        <ComboBoxItem Content="Cantidad Juegos"/>
                     </ComboBox>
                 </StackPanel>
 
@@ -45,7 +45,11 @@
             <StackPanel HorizontalAlignment="Left" Width="635" >
                 <DataGrid x:Name="DatosDataGrid" Height="330" IsReadOnly="True" AutoGenerateColumns="False" AlternatingRowBackground="Gainsboro" TextBlock.TextAlignment="Center">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Ejemplo" Binding="{Binding Ejemplo}"/>
+                        <DataGridTextColumn Header="Prestamo Id" Binding="{Binding PrestamoId}"/>
+                        <DataGridTextColumn Header="Amigo Id" Binding="{Binding AmigoId}"/>
+                        <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha, StringFormat='dd/MM/yyyy'}"/>
+                        <DataGridTextColumn Header="Observación" Binding="{Binding Observacion}"/>
+                        <DataGridTextColumn Header="Cantidad Juegos" Binding="{Binding CantidadJuegosTotal}"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>
