@@ -13,7 +13,7 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Height="35">
-                <TextBox Width="100" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center"/>
+                <TextBox x:Name="JuegoIdTextBox" Text="{Binding JuegoId}" Width="100" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center" TextChanged="JuegoIdTextBox_TextChanged"/>
 
                 <Button x:Name="BuscarButton" Margin="50,0,0,0" Width="120" Click="BuscarButton_Click">
                     <StackPanel Orientation="Horizontal">
@@ -22,26 +22,20 @@
                     </StackPanel>
                 </Button>
             </StackPanel>
-            
-            <Label Content="Fecha de Compra" FontWeight="Bold"/>
+
+            <Label Content="Fecha de Compra" FontWeight="Bold" Margin="0,10,0,0"/>
             <DatePicker x:Name="FechaCompraDatePicker" SelectedDate="{Binding FechaCompra}" Height="30" VerticalContentAlignment="Center"/>
 
-
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                <Label Content="Descripcion" FontWeight="Bold"/>
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal" Height="30" >
-                <TextBox x:Name="DescripcionTextBox" Text="{Binding Descripcion}" Width="300" VerticalContentAlignment="Center" />
-            </StackPanel>
+            <Label Content="Descripcion" FontWeight="Bold"/>
+            <TextBox x:Name="DescripcionTextBox" Text="{Binding Descripcion}" Height="30" VerticalContentAlignment="Center" />
 
             <Label Content="Precio" FontWeight="Bold" Margin="0,0,10,0"/>
-            <TextBox x:Name="PrecioTextBox" Text="{Binding Precio}" Height="30" VerticalContentAlignment="Center" MaxLength="13"/>
+            <TextBox x:Name="PrecioTextBox" Text="{Binding Precio}" Height="30" VerticalContentAlignment="Center" MaxLength="13" TextChanged="PrecioTextBox_TextChanged"/>
 
             <Label Content="Existencia" FontWeight="Bold"/>
             <TextBox x:Name="ExistenciaTextBox" Text="{Binding Existencia}" Height="30" VerticalContentAlignment="Center" TextChanged="ExistenciaTextBox_TextChanged" IsReadOnly="True"/>
 
-             
+
             <StackPanel Orientation="Horizontal" Height="35" Margin="0,30,0,0" HorizontalAlignment="Center">
                 <Button x:Name="NuevoButton" Click="NuevoButton_Click" Width="120">
                     <StackPanel Orientation="Horizontal">

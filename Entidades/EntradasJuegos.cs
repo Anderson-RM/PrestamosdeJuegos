@@ -9,7 +9,7 @@ namespace PrestamosdeJuegos.Entidades
     public class EntradasJuegos
     {
         [Key]
-        public int EntradasJuegosId { get; set; }
+        public int EntradaJuegoId { get; set; }
         public DateTime Fecha { get; set; } = DateTime.Now;
         public int JuegoId { get; set; }
         public double Cantidad { get; set; }

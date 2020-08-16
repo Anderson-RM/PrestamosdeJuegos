@@ -14,7 +14,7 @@ namespace PrestamosdeJuegos.BLL
         //——————————————————————————————————————————————[ GUARDAR ]——————————————————————————————————————————————
         public static bool Guardar(EntradasJuegos entradasJuegos)
         {
-            if (!Existe(entradasJuegos.EntradasJuegosId))
+            if (!Existe(entradasJuegos.EntradaJuegoId))
                 return Insertar(entradasJuegos);
             else
                 return Modificar(entradasJuegos);
@@ -139,7 +139,7 @@ namespace PrestamosdeJuegos.BLL
 
             try
             {
-                encontrado = contexto.EntradasJuegos.Any(e => e.EntradasJuegosId == id);
+                encontrado = contexto.EntradasJuegos.Any(e => e.EntradaJuegoId == id);
             }
             catch (Exception)
             {

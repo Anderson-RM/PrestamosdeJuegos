@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using PrestamosdeJuegos.DAL;
 using PrestamosdeJuegos.Entidades;
 
-namespace ProyectoFinal_PrestamosLibros.BLL
+namespace PrestamosdeJuegos.BLL
 {
     public class PrestamosBLL
     {
@@ -34,7 +34,7 @@ namespace ProyectoFinal_PrestamosLibros.BLL
                 foreach (var item in prestamos.Detalle)
                 {
                     item.FK_Juegos.Existencia -= item.CantidadJuegos;
-                    contexto.Entry(item.CantidadJuegos).State = EntityState.Modified;
+                    contexto.Entry(item.FK_Juegos).State = EntityState.Modified;
                 }
 
                 contexto.Prestamos.Add(prestamos);

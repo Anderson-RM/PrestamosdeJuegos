@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrestamosdeJuegos.UI.Registros"
         mc:Ignorable="d"
-         Title="Registro entrada de juegos" Height="330" Width="510" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+         Title="Registro entrada de juegos" Height="350" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
             <Label Content="EntradaJuego Id" FontWeight="Bold" FontSize="16"/>
@@ -22,7 +22,7 @@
             </StackPanel>
 
             <Label Content="Juego Id" FontWeight="Bold" Margin="0,10,0,0"/>
-            <ComboBox x:Name="JuegoIdComboBox" SelectedValue="{Binding JuegoId}" VerticalContentAlignment="Center" Width="100" HorizontalAlignment="Left"/>
+            <ComboBox x:Name="JuegoIdComboBox" SelectedValue="{Binding JuegoId}" VerticalContentAlignment="Center" Height="30" Width="100" HorizontalAlignment="Left"/>
 
             <Label Content="Fecha" FontWeight="Bold"/>
             <DatePicker x:Name="FechaDatePicker" SelectedDate="{Binding Fecha}" Height="30" VerticalContentAlignment="Center" />

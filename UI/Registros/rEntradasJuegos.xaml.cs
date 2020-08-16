@@ -24,7 +24,7 @@ namespace PrestamosdeJuegos.UI.Registros
             //—————————————————————————————————————[ ComboBox JuegoId ]—————————————————————————————————————
             JuegoIdComboBox.ItemsSource = JuegosBLL.GetJuegos();
             JuegoIdComboBox.SelectedValuePath = "JuegoId";
-            JuegoIdComboBox.DisplayMemberPath = "Nombre";
+            JuegoIdComboBox.DisplayMemberPath = "Descripcion";
         }
         //——————————————————————————————————————————————————————————————[ Cargar ]———————————————————————————————————————————————————————————————
         private void Cargar()
@@ -64,7 +64,7 @@ namespace PrestamosdeJuegos.UI.Registros
             {
                 this.entradasJuegos = new EntradasJuegos();
                 this.DataContext = this.entradasJuegos;
-                MessageBox.Show($"Esta Entrada de Juegos no fue encontrada.\n\nAsegúrese que existe o cree una nueva.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Esta Entrada de Juego no fue encontrada.\n\nAsegúrese que existe o cree una nueva.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 Limpiar();
                 EntradaJuegoIdTextBox.SelectAll();
                 EntradaJuegoIdTextBox.Focus();

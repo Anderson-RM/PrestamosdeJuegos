@@ -26,14 +26,14 @@
 
             <StackPanel Orientation="Vertical" Margin="0,10,0,0">
                 <Label Content="Fecha Préstamo" FontWeight="Bold" />
-                <DatePicker x:Name="FechaPrestamoTextBox" SelectedDate="{Binding FechaPrestamo}" Width="150" Height="25" VerticalContentAlignment="Center" HorizontalAlignment="Left" />
+                <DatePicker x:Name="FechaPrestamoTextBox" SelectedDate="{Binding Fecha}" Width="150" Height="25" VerticalContentAlignment="Center" HorizontalAlignment="Left" />
             </StackPanel>
 
             <Label Content="Amigo Id" FontWeight="Bold" Margin="0,5,0,0"  />
             <ComboBox x:Name="AmigoIdComboBox" SelectedValue="{Binding AmigoId}" Height="25" Width="100" VerticalContentAlignment="Center" HorizontalAlignment="Left" />
 
             <Label Content="Observacion" FontWeight="Bold" Margin="0,5,0,0"/>
-            <TextBox x:Name="ObservacionTextBox" Text="" Height="40" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="ObservacionTextBox" Text="{Binding Observacion}" Height="40" VerticalContentAlignment="Center"/>
              
             <StackPanel Orientation="Vertical">
                 <GroupBox Header="Detalle de Préstamos" Margin="0,10,0,0">
@@ -47,7 +47,7 @@
 
                             <StackPanel Orientation="Vertical" Margin="0,0,40,0" >
                                 <Label Content="Cantidad Juegos" HorizontalAlignment="Center"/>
-                                <TextBox x:Name="CantidaadJuegosTextBox" Height="23" Width="100" VerticalContentAlignment="Center"/>
+                                <TextBox x:Name="CantidadJuegosTextBox" Height="23" Width="100" VerticalContentAlignment="Center" TextChanged="CantidadJuegosTextBox_TextChanged"/>
                             </StackPanel>
 
                             <Button x:Name="AgregarFilaButton" Click="AgregarFilaButton_Click" Height="30" Margin="0,20,0,0">
@@ -61,8 +61,8 @@
                         <DataGrid x:Name="DetalleDataGrid" ItemsSource="{Binding Detalle}" Height="80" AutoGenerateColumns="False" Margin="0,10,0,0">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="Juego Id" Binding="{Binding JuegoId}"/>
-                                <DataGridTextColumn Header="Nombre" Binding="{Binding FK_Juegos.Nombre}"/>
-                                <DataGridTextColumn Header="Cantidad" Binding="{Binding Cantidad}"/>
+                                <DataGridTextColumn Header="Descripcion" Binding="{Binding FK_Juegos.Descripcion}"/>
+                                <DataGridTextColumn Header="Cantidad" Binding="{Binding CantidadJuegos}"/>
                             </DataGrid.Columns>
                         </DataGrid>
 

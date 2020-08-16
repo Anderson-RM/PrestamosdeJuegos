@@ -9,7 +9,7 @@ namespace PrestamosdeJuegos.Entidades
     {
         [Key]
         public int AmigoId { get; set; } 
-        public String Nombres { get; set; } 
+        public String NombreCompleto { get; set; } 
         public String Direccion { get; set; } 
         public long Telefono { get; set; }
         public long Celular { get; set; }
